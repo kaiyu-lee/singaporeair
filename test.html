@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+function getMobileOperatingSystem() {
+  var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+  if( userAgent.match( /iPad/i ) || userAgent.match( /iPhone/i ) || userAgent.match( /iPod/i ) )
+  {    return 'iOS';
+
+  }
+  else if( userAgent.match( /Android/i ) )
+  {
+
+    return 'Android';
+  }
+  else
+  {
+    return 'unknown';
+  }
+}
+var OS = getMobileOperatingSystem()
+if(OS == 'iOS'){
+window.location.replace('https://goo.gl/xCa3VB')
+}
+if(OS == 'Android'){
+document.write(OS)
+window.location.replace('https://goo.gl/6ahfC3')
+}
+if(OS == 'unknown'){
+window.location.replace('http://www.singaporeair.com/microsite/sq_mobile.html')
+}
+</script>
+</body>
+</html>
+

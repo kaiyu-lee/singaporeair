@@ -2,18 +2,14 @@
 <html>
 <body>
 <script>
-function getMobileOperatingSystem() {
-  function startMyApp()
+ function startMyApp()
 {
   document.location = 'YouTube://';
   setTimeout( function()
-  {
-      if( confirm( 'You do not seem to have Your App installed, do you want to go download it now?'))
-      {
-        document.location = 'http://itunes.apple.com/us/app/yourAppId';
-      }
+  {window.location.replace('http://www.google.com')
   }, 300);
  }
+function getMobileOperatingSystem() {
   var userAgent = navigator.userAgent || navigator.vendor || window.opera;
   if( userAgent.match( /iPad/i ) || userAgent.match( /iPhone/i ) || userAgent.match( /iPod/i ) )
   {    return 'iOS';
